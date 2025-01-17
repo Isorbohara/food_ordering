@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_ordering/common/color_extension.dart';
 import 'package:food_ordering/common_widget/round_button.dart';
+import 'package:otp_pin_field/otp_pin_field.dart';
 
 
 class OTPView extends StatefulWidget {
@@ -61,7 +62,7 @@ class _OTPViewState extends State<OTPView> {
                     /// to clear the Otp pin Controller
                     onSubmit: (newCode) {
                       code = newCode;
-                      btnSubmit();
+                      // btnSubmit();
                       /// return the entered pin
                     },
                     onChange: (newCode) {
@@ -115,11 +116,6 @@ class _OTPViewState extends State<OTPView> {
 
                     /// to select cursor width
                     mainAxisAlignment: MainAxisAlignment.center,
-
-                    /// place otp pin field according to yourselft
-
-                    /// predefine decorate of pinField use  OtpPinFieldDecoration.defaultPinBoxDecoration||OtpPinFieldDecoration.underlinedPinBoxDecoration||OtpPinFieldDecoration.roundedPinBoxDecoration
-                    ///use OtpPinFieldDecoration.custom  (by using this you can make Otp_Pin_Field according to yourself like you can give fieldBorderRadius,fieldBorderWidth and etc things)
                     otpPinFieldDecoration:
                         OtpPinFieldDecoration.defaultPinBoxDecoration),),
 
@@ -134,7 +130,7 @@ class _OTPViewState extends State<OTPView> {
                   }),
                 TextButton(
                 onPressed: () {
-                   serviceCallForgotRequest({"email": widget.email});
+                  //  serviceCallForgotRequest({"email": widget.email});
                 },
                 child: Row(
                   mainAxisSize: MainAxisSize.min,

@@ -4,6 +4,7 @@ import 'package:food_ordering/common_widget/round_button.dart';
 import 'package:food_ordering/common_widget/round_textfiels.dart';
 
 
+
 class NewPasswordView extends StatefulWidget {
   final Map nObj;
   const NewPasswordView({super.key, required this.nObj});
