@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:food_ordering/common/color_extension.dart';
+import 'package:food_ordering/common/globs.dart';
+import 'package:food_ordering/common/service_call.dart';
 import 'package:food_ordering/common_widget/round_button.dart';
 import 'package:food_ordering/common_widget/round_textfiels.dart';
 import 'package:food_ordering/common_widget/roundicon_button.dart';
 import 'package:food_ordering/view/login/resetpassword.dart';
 import 'package:food_ordering/view/login/signup_.dart';
+import 'package:food_ordering/view/on_boarding/on_boarding_view.dart';
+import 'package:otp_pin_field/main.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -19,7 +23,6 @@ class _LoginViewState extends State<LoginView> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
@@ -66,7 +69,10 @@ class _LoginViewState extends State<LoginView> {
               RoundButton(
                   title: "Login",
                   onPressed: () {
-                    // btnLogin();
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const OnBoardingView()));
                   }),
               const SizedBox(
                 height: 4,

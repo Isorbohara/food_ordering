@@ -3,7 +3,9 @@ import 'package:food_ordering/common/color_extension.dart';
 import 'package:food_ordering/common_widget/tab_button.dart';
 import 'package:food_ordering/view/home/home_view.dart';
 import 'package:food_ordering/view/menu/menu_view.dart';
+import 'package:food_ordering/view/more/more_view.dart';
 import 'package:food_ordering/view/offer/offer_view.dart';
+import 'package:food_ordering/view/profile/profile_view.dart';
 
 class MainTabView extends StatefulWidget {
   const MainTabView({super.key});

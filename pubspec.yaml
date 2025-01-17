@@ -43,6 +43,8 @@ dependencies:
   get_it: ^8.0.3
   flutter_timezone: ^4.0.0
   shared_preferences: ^2.3.3
+  image_picker: ^1.1.2
+  custom_map_markers: ^0.0.2+1
   
  
 

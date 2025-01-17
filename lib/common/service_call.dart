@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
+import 'package:food_ordering/common/globs.dart';
 import 'package:food_ordering/common/location.dart';
 
 import 'package:http/http.dart' as http;

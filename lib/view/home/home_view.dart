@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_ordering/common/color_extension.dart';
+import 'package:food_ordering/common/globs.dart';
+import 'package:food_ordering/common/service_call.dart';
 import 'package:food_ordering/common_widget/category_cell.dart';
 import 'package:food_ordering/common_widget/most_populae_cell.dart';
 import 'package:food_ordering/common_widget/popular_row_widget.dart';
