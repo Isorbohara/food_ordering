@@ -8,7 +8,6 @@ import 'package:food_ordering/common_widget/roundicon_button.dart';
 import 'package:food_ordering/view/login/resetpassword.dart';
 import 'package:food_ordering/view/login/signup_.dart';
 import 'package:food_ordering/view/on_boarding/on_boarding_view.dart';
-import 'package:otp_pin_field/main.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
