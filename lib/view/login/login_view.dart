@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:food_ordering/common/color_extension.dart';
-import 'package:food_ordering/common/globs.dart';
-import 'package:food_ordering/common/service_call.dart';
 import 'package:food_ordering/common_widget/round_button.dart';
 import 'package:food_ordering/common_widget/round_textfiels.dart';
 import 'package:food_ordering/common_widget/roundicon_button.dart';
