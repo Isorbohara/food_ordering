@@ -62,7 +62,7 @@ class _OTPViewState extends State<OTPView> {
                     /// to clear the Otp pin Controller
                     onSubmit: (newCode) {
                       code = newCode;
-                      // btnSubmit();
+                      /// btnSubmit();
                       /// return the entered pin
                     },
                     onChange: (newCode) {

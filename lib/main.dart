@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:food_ordering/common/color_extension.dart';
@@ -11,23 +13,25 @@ import 'package:food_ordering/view/main_tabview/main_tabview.dart';
 import 'package:food_ordering/view/on_boarding/startup_view.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-
 import 'common/globs.dart';
-
-
 
 SharedPreferences? prefs;
 void main() async {
   setUpLocator();
   HttpOverrides.global = MyHttpOverrides();
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   prefs = await SharedPreferences.getInstance();
 
-  if(Globs.udValueBool(Globs.userLogin)) {
+  if (Globs.udValueBool(Globs.userLogin)) {
     ServiceCall.userPayload = Globs.udValue(Globs.userPayload);
   }
 
-  runApp( const MyApp(defaultHome:  StartupView(),));
+  runApp(const MyApp(
+    defaultHome: StartupView(),
+  ));
 }
 
 void configLoading() {
@@ -53,7 +57,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -82,18 +85,18 @@ class _MyAppState extends State<MyApp> {
       ),
       home: widget.defaultHome,
       navigatorKey: locator<NavigationService>().navigatorKey,
-      onGenerateRoute: (routeSettings){
+      onGenerateRoute: (routeSettings) {
         switch (routeSettings.name) {
           case "welcome":
-              return MaterialPageRoute(builder: (context) => const WelcomeView() );
+            return MaterialPageRoute(builder: (context) => const WelcomeView());
           case "Home":
-              return MaterialPageRoute(builder: (context) => const MainTabView() );
+            return MaterialPageRoute(builder: (context) => const MainTabView());
           default:
-              return MaterialPageRoute(builder: (context) => Scaffold(
-                body: Center(
-                  child: Text("No path for ${routeSettings.name}")
-                ),
-              ) );
+            return MaterialPageRoute(
+                builder: (context) => Scaffold(
+                      body: Center(
+                          child: Text("No path for ${routeSettings.name}")),
+                    ));
         }
       },
       builder: (context, child) {
